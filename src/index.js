@@ -15,11 +15,16 @@ if (isNative(nativeHasOwnProp)) {
     has = function has(object, key) {
         var proto;
 
-        if (!isNullOrUndefined(object)) {
+        if (isNullOrUndefined(object)) {
             return false;
         } else {
             proto = getPrototypeOf(object);
-            return (key in object) && (!(key in proto) || proto[key] !== object[key]);
+
+            if (isNullOrUndefined(proto)) {
+                return key in object;
+            } else {
+                return (key in object) && (!(key in proto) || proto[key] !== object[key]);
+            }
         }
     };
 }

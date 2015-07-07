@@ -7,6 +7,9 @@
     "url": "https://github.com/nathanfaucett/has.git"
   },
   "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "has",
     "has.js"
@@ -19,5 +22,10 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jsbeautifier": "^0.2.7",
     "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "get_prototype_of": "git://github.com/nathanfaucett/get_prototype_of.git",
+    "is_native": "git://github.com/nathanfaucett/is_native.git",
+    "is_null_or_undefined": "git://github.com/nathanfaucett/is_null_or_undefined.git"
   }
 }

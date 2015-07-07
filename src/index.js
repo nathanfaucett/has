@@ -1,9 +1,28 @@
-var hasOwnProp = Object.prototype.hasOwnProperty;
+var isNative = require("is_native"),
+    getPrototypeOf = require("get_prototype_of"),
+    isNullOrUndefined = require("is_null_or_undefined");
+
+
+var nativeHasOwnProp = Object.prototype.hasOwnProperty,
+    has;
+
+
+if (isNative(nativeHasOwnProp)) {
+    has = function has(object, key) {
+        return !isNullOrUndefined(object) && nativeHasOwnProp.call(object, key);
+    };
+} else {
+    has = function has(object, key) {
+        var proto;
+
+        if (!isNullOrUndefined(object)) {
+            return false;
+        } else {
+            proto = getPrototypeOf(object);
+            return (key in object) && (!(key in proto) || proto[key] !== object[key]);
+        }
+    };
+}
 
 
 module.exports = has;
-
-
-function has(obj, key) {
-    return hasOwnProp.call(obj, key);
-}

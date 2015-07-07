@@ -9,7 +9,11 @@ var nativeHasOwnProp = Object.prototype.hasOwnProperty,
 
 if (isNative(nativeHasOwnProp)) {
     has = function has(object, key) {
-        return !isNullOrUndefined(object) && nativeHasOwnProp.call(object, key);
+        if (isNullOrUndefined(object)) {
+            return false;
+        } else {
+            return nativeHasOwnProp.call(object, key);
+        }
     };
 } else {
     has = function has(object, key) {

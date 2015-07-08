@@ -8,7 +8,10 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run test-node",
+    "test-node": "node ./test | ./node_modules/.bin/tap-spec",
+    "test-node-raw": "node ./test",
+    "test-browser-local": "zuul --local 8080 --ui tape -- ./test"
   },
   "keywords": [
     "has",
@@ -18,10 +21,13 @@
   "license": "BSD-2-Clause",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "create": "git://github.com/nathanfaucett/create.git",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jsbeautifier": "^0.2.7",
-    "mocha": "^2.1.0"
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0",
+    "zuul": "^3.0.0"
   },
   "dependencies": {
     "get_prototype_of": "git://github.com/nathanfaucett/get_prototype_of.git",

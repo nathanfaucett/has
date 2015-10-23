@@ -18,7 +18,7 @@
     "has.js"
   ],
   "author": "Nathan Faucett",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
     "create": "git://github.com/nathanfaucett/create.git",

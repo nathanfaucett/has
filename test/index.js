@@ -1,6 +1,6 @@
 var tape = require("tape"),
     create = require("create"),
-    has = require("../src/index");
+    has = require("..");
 
 
 tape("has(object, key) should return true if object has own property", function(assert) {

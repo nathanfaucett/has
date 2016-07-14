@@ -1,6 +1,6 @@
-var isNative = require("is_native"),
-    getPrototypeOf = require("get_prototype_of"),
-    isNullOrUndefined = require("is_null_or_undefined");
+var isNative = require("@nathanfaucett/is_native"),
+    getPrototypeOf = require("@nathanfaucett/get_prototype_of"),
+    isNullOrUndefined = require("@nathanfaucett/is_null_or_undefined");
 
 
 var nativeHasOwnProp = Object.prototype.hasOwnProperty,

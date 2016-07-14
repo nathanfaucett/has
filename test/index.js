@@ -1,5 +1,5 @@
 var tape = require("tape"),
-    create = require("create"),
+    create = require("@nathanfaucett/create"),
     has = require("..");
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/has",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "hasOwnProperty for the browser and node.js",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "@nathanfaucett/create": "0.0.1",
+    "@nathanfaucett/create": "^0.0.2",
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-jsbeautifier": "^0.2.13",
@@ -30,8 +30,8 @@
     "zuul": "^3.7.2"
   },
   "dependencies": {
-    "@nathanfaucett/get_prototype_of": "0.0.1",
-    "@nathanfaucett/is_native": "0.0.2",
-    "@nathanfaucett/is_null_or_undefined": "0.0.1"
+    "@nathanfaucett/get_prototype_of": "^0.0.1",
+    "@nathanfaucett/is_native": "^0.0.2",
+    "@nathanfaucett/is_null_or_undefined": "^0.0.1"
   }
 }
